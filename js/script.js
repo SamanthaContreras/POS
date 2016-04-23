@@ -48,9 +48,9 @@ $(document).ready(function(){
 	$(document).on("click",".delete",function(){
 		var totalItemRemove = $(this).parent().prev().text();
 		$(this).parentsUntil("tbody").remove();
-		total -= parseFloat(subtotal) + parseFloat(tax);
-		tax -= subtotal * 0.15;
 		subtotal -= totalItemRemove;
+		tax = subtotal * 0.15;
+		total = parseFloat(subtotal) + parseFloat(tax);
 		$("tfoot tr").eq(0).children().eq(1).text(subtotal);
 		$("tfoot tr").eq(1).children().eq(1).text(tax);
 		$("tfoot tr").eq(2).children().eq(1).text(total);
