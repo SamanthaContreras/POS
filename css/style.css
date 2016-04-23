@@ -5,28 +5,50 @@ body{
 
 body {
 	width: 100%;
-	background-color: #D8D8D8;
 	font-family: helvetica;
 	font-weight: lighter;
+	margin-top: 0;
+}
+
+button {
+	width: 80px;
+	height: 30px;
+	border-radius: 6px;
+	box-shadow: none;
+	border: none;
+	font-size: 15px;
+	background-color: #0489B1;
+	color: white;
 }
 
 #container {
-	width: 1000px;
-	height: 100%;
-	background-color: white;
-	padding: 5px 20px 30px 20px;
+	width: 1200px;
+	margin: 10px auto;
+	padding: 0;
 	border-radius: 5px;
-	margin: auto;
 }
 
-input[type="text"], input[type="number"] {
+#datetime {
+	font-size: 25px;
+}
+
+h1 {
+	margin-top: 0; 
+	color: white;
+	font-weight: lighter;
+	background-color: black;
+	padding: 30px 15px;
+}
+
+input[type="text"], input[type="tel"] {
 	transition: all 0.30s ease-in-out;
+	width: 400px;
 	color: #555;
-	height: 30px;
+	height: 40px;
 	margin: 2px 6px 16px 0px;
 	outline: 0 none;
 	padding: 0 5px;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: lighter;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -34,8 +56,8 @@ input[type="text"], input[type="number"] {
 	outline: none;
 }
 
-input[type="number"] {
-	width: 80px;
+input[type="tel"] {
+	width: 95px;
 }
 
 button:hover {
@@ -43,7 +65,10 @@ button:hover {
 }
 
 table {
-	width: 100%;
+	float: left;
+	width: 800px;
+	table-layout: fixed;
+	margin: 0 20px 0 0;
 }
 
 th, td {
@@ -52,35 +77,71 @@ th, td {
 	font-weight: lighter;
 }
 
+tbody td[colspan="5"]{
+	text-align: center;
+	color: lightgray;
+	font-size: 25px;
+	border: none;
+	height: 200px;
+}
+
 th {
 	background-color: #BDBDBD;
 	color: white;
 	height: 60px;
 }
 
-tbody tr {
+td button {
+	margin: 0;
+}
+
+thead tr th:first-child {
+	width: 400px;
+}
+
+
+thead tr th:last-child {
+	width: 80px;
+}
+
+tbody td {
 	height: 60px;
+	border-top: solid lightgray 1px;
 }
 
 tfoot{
 	background-color: gray;
 }
 
-tfoot tr {
+tfoot td{
 	height: 60px;
-
+	color: white;
+	text-align: right;
 }
 
-.delete {
-	float: right;
-	margin: 0;
-	background-color: #0099CC;
-	border: none;
-	padding: 5px 5px;
+tfoot tr td:nth-child(2){
+	font-size: 28px;
 	color: white;
-	border-radius: 4px;
-	font-size: 12px;
-	font-family: helvetica;
-	font-weight: lighter;
-	transition: all 0.15s;
+	text-align: left;
+}
+
+tfoot tr:last-child{
+	background-color: white;
+	border: none;
+}
+
+div div{
+	margin: 0;
+}
+
+div div img{
+	float: left;
+	width: 50px;
+	padding: 20px;
+	border-radius: 80px;
+}
+
+div div p {
+	padding: 15px;
+	font-size: 18px;
 }
