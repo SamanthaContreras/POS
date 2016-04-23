@@ -1,14 +1,41 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Shopping Cart</title>
+	<title>Tienda</title>
 </head>
 <body>
-
-
-	<script src="js/jquery-1.12.3.min"></script>
+	<div id="container">
+		<h1>Tienda</h1>
+		<input type="text" placeholder="Product"/>
+		<input type="number" placeholder="Price"/>
+		<input type="number" placeholder="Qty"/>
+		<button>Add</button>
+		<table>
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>Price</th>
+					<th>Qty</th>
+					<th>Total item</th>
+					<th>---</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td style="text-align:right">Subtotal: </td>
+					<td>0</td>
+					<td style="text-align:right">Total: </td>
+					<td>0</td>
+					<td></td>
+					<!-- <td width="40px"></td> -->
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<script src="js/jquery-1.12.3.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
