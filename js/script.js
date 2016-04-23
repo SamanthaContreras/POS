@@ -18,8 +18,11 @@ $(document).ready(function(){
 		$price.val("");
 		$quantity.val("");
 	});
+
 	$(document).on("click",".delete",function(){
+		var totalItemRemove = $(this).parent().prev().text();
 		$(this).parentsUntil("tbody").remove();
+		$("tfoot tr td").eq(1).text(total -= totalItemRemove);
 	});
 
 });
