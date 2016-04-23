@@ -21,14 +21,18 @@ button {
 	color: white;
 }
 
-#container {
+button:hover {
+	cursor: pointer;
+}
+
+body > div {
 	width: 1200px;
 	margin: 10px auto;
 	padding: 0;
 	border-radius: 5px;
 }
 
-#datetime {
+span {
 	font-size: 25px;
 }
 
@@ -60,9 +64,8 @@ input[type="tel"] {
 	width: 95px;
 }
 
-button:hover {
-	cursor: pointer;
-}
+
+/* ------------- Tabla ------------ */
 
 table {
 	float: left;
@@ -72,29 +75,17 @@ table {
 }
 
 th, td {
-	text-align: left;
 	padding: 5px 10px;
 	font-weight: lighter;
 }
 
-tbody td[colspan="5"]{
-	text-align: center;
-	color: lightgray;
-	font-size: 25px;
-	border: none;
-	height: 200px;
-}
 
 th {
 	background-color: #BDBDBD;
 	color: white;
 	height: 60px;
 }
-
-td button {
-	margin: 0;
-}
-
+ /* Encabezado */
 thead tr th:first-child {
 	width: 400px;
 }
@@ -103,12 +94,21 @@ thead tr th:first-child {
 thead tr th:last-child {
 	width: 80px;
 }
+/* Contenido */
+tbody td[colspan="5"]{
+	text-align: center;
+	color: lightgray;
+	font-size: 25px;
+	border: none;
+	height: 200px;
+}
 
 tbody td {
 	height: 60px;
 	border-top: solid lightgray 1px;
 }
 
+/* Pie de tabla */
 tfoot{
 	background-color: gray;
 }
@@ -130,6 +130,7 @@ tfoot tr:last-child{
 	border: none;
 }
 
+/* -------- Info empleado ------- */
 div div{
 	margin: 0;
 }

@@ -9,7 +9,7 @@ var update = function () {
 };
 
 $(document).ready(function(){
-	datetime = $('#datetime');
+	datetime = $('span');
     update();
     setInterval(update, 1000);
 
@@ -21,6 +21,7 @@ $(document).ready(function(){
 		subtotal = 0,
 		tax = 0,
 		total = 0;
+
 		$("button").click(function(){
 
 			$("tbody tr td[colspan='5']").remove();
@@ -43,6 +44,7 @@ $(document).ready(function(){
 			$quantity.val("");
 
 		});
+
 	$(document).on("click",".delete",function(){
 		var totalItemRemove = $(this).parent().prev().text();
 		$(this).parentsUntil("tbody").remove();
