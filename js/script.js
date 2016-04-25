@@ -25,20 +25,17 @@ $(document).ready(function(){
 		$("button").click(function(){
 
 			$("tbody tr td[colspan='5']").remove();
-			console.log($price.val());
-			console.log($product.val());
-			totalItem = $price.val() * $quantity.val();
+			totalItem = Number($price.val()) * Number($quantity.val());
 			var newRow = "<tr><td>"+$product.val()
 						+"</td><td>"+$price.val()+"</td><td>"
 						+$quantity.val()+"</td><td>"+totalItem+"</td><td>"+btnDelete+"</tr>";
 			$("tbody").append(newRow);
 			subtotal+=totalItem;
 			tax = (subtotal*0.15).toFixed(2);
-			total = parseFloat(subtotal) + parseFloat(tax);
+			total = Number(subtotal) + Number(tax);
 			$("tfoot tr").eq(0).children().eq(1).text(subtotal);
 			$("tfoot tr").eq(1).children().eq(1).text(tax);
 			$("tfoot tr").eq(2).children().eq(1).text(total);
-			console.log(total);
 			$product.val("");
 			$price.val("");
 			$quantity.val("");
@@ -46,10 +43,10 @@ $(document).ready(function(){
 		});
 
 	$(document).on("click",".delete",function(){
-		var totalItemRemove = $(this).parent().prev().text();
+		var totalItemRemove = Number($(this).parent().prev().text());
 		$(this).parentsUntil("tbody").remove();
 		subtotal -= totalItemRemove;
-		tax = subtotal * 0.15;
+		tax = (subtotal * 0.15).toFixed(2);
 		total = parseFloat(subtotal) + parseFloat(tax);
 		$("tfoot tr").eq(0).children().eq(1).text(subtotal);
 		$("tfoot tr").eq(1).children().eq(1).text(tax);
